@@ -32,17 +32,32 @@ Add collision markers to the **Hit** animation at the frame where you want weapo
 
 `RIGHT` and `LEFT` mean the **equipped slots**. They do not mean the final `R` or `L` text in an animation filename.
 
-### Repeated contacts
+### Repeated contacts and `G3AB_COL_OFF`
 
-You may place the same weapon marker again later in the Hit animation when the attack should make another contact.
+One activation can damage more than one opponent. If the active weapon passes through several enemies, each of them can be damaged without adding another marker.
 
-For example, a multi-hit animation may use:
+However, the same attack can normally damage the **same target only once during that activation**. If the animation has a second real contact and should be able to damage the same target again, place the weapon marker again to reactivate it.
+
+For example, a two-hit attack may use:
 
 ```text
 first contact   -> G3AB_COL_RIGHT
-inactive gap    -> G3AB_COL_OFF
 second contact  -> G3AB_COL_RIGHT
 ```
+
+The first `RIGHT` activation can hit several different opponents. The second `RIGHT` marker is not needed just because the first contact hit somebody; it is there so the later contact becomes a new activation and can damage the same target again.
+
+You do **not** need `G3AB_COL_OFF` between every two contacts.
+
+Use `G3AB_COL_OFF` when the animation contains a part where **nobody should be damaged**, even if the weapon passes through an opponent during that movement. For example:
+
+```text
+first contact    -> G3AB_COL_RIGHT
+inactive movement -> G3AB_COL_OFF
+second contact   -> G3AB_COL_RIGHT
+```
+
+This is useful when the weapon remains close to enemies while the character is repositioning, turning, pulling the weapon back, or moving into the next strike. `OFF` creates a clear inactive part of the animation before the next marker activates contact again.
 
 For a dual-wield contact where both weapons should be active together, use:
 
