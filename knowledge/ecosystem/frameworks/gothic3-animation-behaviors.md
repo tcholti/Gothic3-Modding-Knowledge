@@ -96,8 +96,11 @@ The current public marker contract includes these established attack families:
 | Full Whirl | Yes |
 | HackAttack | Yes — current tested 2H / Staff scope |
 | FinishingAttack | **No** |
+| GetUpAttack | **No** — intentionally not supported |
 
 If an attack family is not listed here, do not assume that it is supported. The framework may add more families later.
+
+`GetUpAttack` is intentionally left unsupported. It works differently enough from the ordinary attack families that adding marker support would make the framework more complicated, while there is currently no clear animation-authoring need for it.
 
 ### FinishingAttack is intentionally different
 
