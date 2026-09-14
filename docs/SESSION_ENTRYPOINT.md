@@ -70,7 +70,8 @@ The first real promotion slice has validated the ordinary Markdown page model an
 - actions, phases and UseType normalization;
 - source/hook research rules;
 - tested build-specific RVAs;
-- CombatMove/script-continuation behavior.
+- CombatMove/script-continuation behavior;
+- the first reusable framework authoring guide for `Gothic3_Animation_Behaviors`.
 
 Continue extracting **established reusable Gothic 3 and Gothic 3 modding-ecosystem knowledge** from source projects, especially `Gothic3_Animation_Behaviors`, without importing their task history, evidence-ledger chronology, temporary probes, project plans or internal machinery that readers do not need.
 
@@ -78,7 +79,7 @@ Continue extracting **established reusable Gothic 3 and Gothic 3 modding-ecosyst
 
 ## Latest durable boundary
 
-**Stage 1 initial knowledge promotion is complete and the reader-page convention is frozen.**
+**Stage 1 initial knowledge promotion is complete, the ordinary reader-page convention is frozen, and the first framework-page convention is now established.**
 
 Reader-facing knowledge now starts at:
 
@@ -90,14 +91,15 @@ Reader-facing knowledge now starts at:
 - `knowledge/hooks/index.md`
 - `knowledge/reference/tested-rvas.md`
 - `knowledge/engine/combat/combat-move.md`
+- `knowledge/ecosystem/frameworks/gothic3-animation-behaviors.md`
 
-Initial promotion source baseline:
+Initial promotion/framework source baseline:
 
 `tcholti/Gothic3_Animation_Behaviors` branch `docs/collision-source-evidence` at:
 
 `9e8ea4034aa9d9ac10e3d6723795ce444f218404`
 
-`PROJECT_PIPELINE.md` owns the accepted ordinary Markdown page convention and now also owns the distinction between:
+`PROJECT_PIPELINE.md` owns the accepted ordinary Markdown page convention, the accepted first framework-page convention, and the distinction between:
 
 ```text
 native Gothic 3 knowledge
@@ -105,7 +107,7 @@ framework/mod-specific public contracts
 tool/resource knowledge
 ```
 
-The architecture now explicitly allows future `knowledge/ecosystem/frameworks/` and `knowledge/tools/` surfaces when real content is ready. No empty reader-facing sections have been created merely to reserve them.
+The framework knowledge surface is now instantiated with the G3AB animation-author guide. `knowledge/tools/` remains an approved future surface but has not been created merely to reserve it.
 
 Adopted CAM baseline remains:
 
@@ -121,6 +123,8 @@ No website implementation is frozen, no native evidence-ID namespace exists, no 
 - `docs/` owns project infrastructure; `knowledge/` owns reader-facing Gothic 3 and modding-ecosystem subject matter; `data/` is reserved for structured/bulk reference data when needed.
 - Reader-facing knowledge must distinguish **native**, **framework/mod-specific**, and **tool/resource** scope rather than excluding useful non-native knowledge.
 - Framework pages are reserved for a small number of important reusable framework-type mods; this is not intended to become a catalog of ordinary content mods.
+- `knowledge/ecosystem/frameworks/gothic3-animation-behaviors.md` is the first framework authority and currently documents the animation-author contract: equipped collision markers, FIST authoring, supported/unsupported families, separate HackAttack animation naming, and practical limits.
+- The first framework page established an accepted framework header and writing convention: explicit knowledge class/framework/scope, practical user-first explanation, clear supported/unsupported boundaries, and plain English with unnecessary implementation jargon removed.
 - A future curated tools/resources index is approved in principle for SDKs, editors, import/export utilities and other useful Gothic 3 modding tools; authoritative links and compatibility/status should be preserved when known.
 - Current reader layers remain Guides, Reference and Research/provenance, but only categories with real content should be instantiated.
 - Ordinary technical Markdown pages use the accepted header/body/provenance pattern in `PROJECT_PIPELINE.md` §§5 and 9.
@@ -129,10 +133,10 @@ No website implementation is frozen, no native evidence-ID namespace exists, no 
 - Source-project evidence IDs keep their source identity rather than being automatically renumbered here.
 - Promotion copies reusable meaning or a reusable public framework contract, not another project's local task/build/probe machinery.
 - Native engine facts and current shared interpretation belong here; unfinished source-project research remains in the source project until its reusable meaning is sufficiently established.
-- Framework-specific features such as future `G3AB_COL_*` documentation may belong here when documenting the public `Gothic3_Animation_Behaviors` authoring contract, but must never be presented as native Gothic 3 behavior.
+- G3AB features such as `G3AB_COL_RIGHT`, `G3AB_COL_LEFT`, `G3AB_COL_BOTH`, `G3AB_COL_OFF` and `G3AB_COL_FIST` are documented only as framework features, never as native Gothic 3 markers.
 - `main` is the accepted public/project state; working branches/PRs are appropriate for coordinated or experimental promotion batches.
 - Searchable static documentation remains intended, but exact site tooling/frontmatter/navigation/deployment conventions remain deliberately unfrozen until website work actually begins.
-- `KNOWLEDGE_REGISTRY.md` contains orientation routes for animation, hooks/source work and CombatMove/script-continuation knowledge, plus approved future routes for framework and tools knowledge.
+- `KNOWLEDGE_REGISTRY.md` contains orientation routes for animation, hooks/source work, CombatMove/script-continuation knowledge and the G3AB animation-author framework page.
 
 ---
 
@@ -148,26 +152,25 @@ Before adopting a first structured dataset, decide from that real case:
 - provenance fields;
 - whether any reader page is generated or independently authored.
 
-Two additional first-use decisions are deliberately deferred until real content exists:
+One additional first-use decision remains deliberately deferred until real content exists:
 
-- the exact recurring fields for a framework profile/page;
 - the exact recurring fields/schema for the curated tools/resources index.
 
-Each must execute the first-use convention capture rule in `PROJECT_PIPELINE.md` §0 before a second independent instance creates drift.
+That first tools implementation must execute the first-use convention capture rule in `PROJECT_PIPELINE.md` §0 before a second independent tool-entry pattern creates drift.
 
 ---
 
 ## Immediate next responsibility
 
-Continue knowledge promotion using the validated page model.
+Continue knowledge promotion using the validated page models.
 
 Preferred next source-project material, in bounded batches:
 
-1. **animation assets/families and frame effects** — promote stable native asset/mechanism knowledge; if `Gothic3_Animation_Behaviors` public authoring features such as `G3AB_COL_*` are documented, promote them separately and explicitly as framework-specific ecosystem knowledge rather than mixing them into native animation semantics;
+1. **animation assets/families and frame effects** — promote stable native asset/mechanism knowledge; expand the existing G3AB framework page only when additional public authoring features are stable enough to document;
 2. **script-processing/API mechanisms** — `gCScriptProcessingUnit`, script state/callback concepts and other established engine-facing semantics that are reusable outside the mod;
 3. **collision/damage mechanisms only where already closed enough to state cleanly** — preserve distinctions between equipped collision, raw-8 body damage and any still-active research boundary; do not turn unfinished raw55/PhysicalFist research into canonical general claims;
 4. **native inventories/reference data** when useful — if a structured dataset is introduced, freeze its first-use schema/ownership convention immediately;
-5. **framework/tools surfaces when deliberately selected as a bounded batch** — use the first real framework page or tools index to freeze its specific recurring fields, then expand consistently.
+5. **tools/resources when deliberately selected as a bounded batch** — use the first real tools index to freeze its specific recurring fields, then expand consistently.
 
 For each batch:
 
@@ -195,7 +198,8 @@ Do not perform a bulk document copy from `Gothic3_Animation_Behaviors` and do no
 - animation orientation → `knowledge/animation/index.md`
 - hooks/source orientation → `knowledge/hooks/index.md`
 - CombatMove/script continuation → `knowledge/engine/combat/combat-move.md`
-- framework/tools direction before first instantiation → `docs/KNOWLEDGE_BASE_PLAN.md` + relevant `PROJECT_PIPELINE.md` sections
+- G3AB animation authoring → `knowledge/ecosystem/frameworks/gothic3-animation-behaviors.md`
+- tools direction before first instantiation → `docs/KNOWLEDGE_BASE_PLAN.md` + relevant `PROJECT_PIPELINE.md` sections
 - central bootstrap/recovery/review procedure → adopted CAM `COLLABORATION_PROCEDURES.md`
 - deeper source-project proof → targeted authority/provenance in `tcholti/Gothic3_Animation_Behaviors`, not a whole-repository reread
 
