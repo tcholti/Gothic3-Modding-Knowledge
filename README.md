@@ -6,21 +6,32 @@ The goal is to turn reusable discoveries from Gothic 3 modding projects into doc
 
 This repository is deliberately **not** a dump of one mod project's internal documentation or research history. Source projects act as laboratories; this repository is the shared library. Reusable findings are distilled here with their important scope, confidence and provenance preserved.
 
-## Current status
+## Start here
 
-The sustained-project foundation has been established. Substantial Gothic 3 knowledge migration has **not** started yet.
+**[Open the Gothic 3 knowledge base](knowledge/index.md)**
 
-The next stage is to validate the knowledge format with a small representative slice of established material — initially animation semantics, actions/phases/UseTypes and source/hook reference knowledge — before building out the larger repository or final documentation website.
+Current reader-facing material includes:
+
+- Gothic 3 animation filename structure and interpretation;
+- combat `gEAction` / `gEPhase` reference;
+- `gEUseType` to animation-token normalization;
+- practical hook/source-research rules;
+- tested build-specific RVAs and call sites;
+- CombatMove execution, script suspension and continuation behavior.
+
+The knowledge base will continue to grow domain-by-domain as established reusable findings are promoted from Gothic 3 modding/research projects.
 
 ## Project architecture
 
+These files sustain the repository itself; ordinary readers do not need them to use the Gothic 3 knowledge pages.
+
 - [Knowledge Base Plan](docs/KNOWLEDGE_BASE_PLAN.md) — intended knowledge-base shape and development direction
 - [Project Manifest](docs/PROJECT_MANIFEST.md) — purpose, scope and authority topology
-- [Project Pipeline](docs/PROJECT_PIPELINE.md) — stable naming, taxonomy, provenance/status and promotion conventions
-- [Knowledge Registry](docs/KNOWLEDGE_REGISTRY.md) — knowledge ownership and update triggers
+- [Project Pipeline](docs/PROJECT_PIPELINE.md) — stable naming, page, taxonomy, provenance/status and promotion conventions
+- [Knowledge Registry](docs/KNOWLEDGE_REGISTRY.md) — knowledge ownership, orientation routes and update triggers
 - [Session Entry Point](docs/SESSION_ENTRYPOINT.md) — durable continuation route for future project contexts
 
-Reader-facing Gothic 3 subject matter will live under `knowledge/` as it is created. Structured reference datasets may live under `data/` when that representation is more appropriate than prose.
+Reader-facing Gothic 3 subject matter lives under `knowledge/`. Structured reference datasets may live under `data/` when that representation is more appropriate than prose.
 
 ## Guiding principle
 
