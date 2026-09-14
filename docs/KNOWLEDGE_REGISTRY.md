@@ -26,7 +26,8 @@ This registry prevents the project plan, pipeline, indexes, topic pages and sour
 | project-specific collaboration adaptations | `docs/COLLABORATION_DELTA.md` | CAM reusable baseline | recurring project-specific participant/tool/evidence/retrieval collaboration behavior changes | ordinary subject-matter knowledge or general CAM behavior applies unchanged |
 | reader-facing top-level navigation | `knowledge/index.md` | domain indexes/topic pages | top-level reader routes materially change | ordinary fact correction inside an already-routed page |
 | native Gothic 3 topic knowledge | owning native topic/reference page under `knowledge/` | source-project provenance / SDK / reference data / related topic routes | current bounded Gothic 3 meaning is established, corrected, scoped differently or materially reinterpreted | framework-only behavior or project-local implementation detail with no native meaning |
-| reusable framework/mod-specific public contracts | future owning page under `knowledge/ecosystem/frameworks/` once instantiated | authoritative framework repository/release/docs + source-project provenance | framework public behavior, authoring/API contract, compatibility boundary or supported scope changes materially | internal project machinery that framework users do not need; native Gothic 3 facts that belong in native topic pages |
+| `Gothic3_Animation_Behaviors` public animation-author contract | `knowledge/ecosystem/frameworks/gothic3-animation-behaviors.md` | authoritative framework repository/revision + native animation reference pages | public marker behavior, supported attack families, Hack authoring, compatibility boundary or other author-facing framework behavior changes materially | internal framework implementation machinery that animation authors do not need; native Gothic 3 facts that belong in native topic pages |
+| other reusable framework/mod-specific public contracts | future owning page under `knowledge/ecosystem/frameworks/` when a real framework is selected | authoritative framework repository/release/docs + source-project provenance | framework public behavior, authoring/API contract, compatibility boundary or supported scope changes materially | ordinary content-mod cataloguing or internal project machinery with no reusable public contract |
 | curated modding tools/resources | future `knowledge/tools/index.md` and/or tool records once instantiated | authoritative tool/repository/home/download sources | a useful tool/resource is added, removed, moved, materially changes purpose/compatibility/status, or an authoritative link changes | transient mentions or unverified community links |
 | exact structured Gothic 3 reference dataset | owning artifact under `data/` once a domain deliberately adopts structured data | generated reader surface or source inventory | authoritative dataset changes or schema changes deliberately | prose explanation changes without data change |
 | reader-facing domain index / navigation route | relevant index under `knowledge/` | owning topic/framework/tool pages/data | retrieval materially improves or category route changes | every new fact already discoverable through current route |
@@ -36,7 +37,7 @@ This registry prevents the project plan, pipeline, indexes, topic pages and sour
 
 No project-local operating-procedure authority, implementation protocol, global evidence ledger or native evidence-ID namespace exists at initialization. Add such responsibilities only when actual recurring work demonstrates the need. When the **first accepted instance** creates one of these recurring mechanisms, `PROJECT_PIPELINE.md` §0 requires its repeatable convention to be captured before a second independent instance can drift.
 
-Framework and tool categories are approved responsibilities but should not be instantiated as empty reader-facing directories/pages merely because they now exist in the architecture.
+The framework category is now instantiated by the `Gothic3_Animation_Behaviors` author guide. The tools category remains approved but should not be instantiated as an empty reader-facing section merely to reserve it.
 
 ---
 
@@ -61,7 +62,7 @@ Examples:
 - the manifest may define that public knowledge must preserve provenance;
 - the pipeline defines the recurring provenance/page/knowledge-class convention;
 - an animation page owns the current native Gothic 3 animation fact;
-- a future framework page may own the curated `Gothic3_Animation_Behaviors` authoring contract while that framework repository remains normative for its own release behavior;
+- `knowledge/ecosystem/frameworks/gothic3-animation-behaviors.md` owns the curated author-facing framework explanation while the framework repository remains normative for exact framework implementation/release behavior;
 - a future tools index may own discovery/navigation while each tool's authoritative project remains the source of truth for the tool itself;
 - a source-project EV record may own the detailed proof;
 - an index only routes the reader to the owning page.
@@ -137,7 +138,8 @@ Use these routes once when entering a substantial knowledge domain without suffi
 | source / API / hooks | `knowledge/hooks/index.md` → `knowledge/reference/tested-rvas.md` → exact source/project reference only when needed |
 | CombatMove / script continuation | `knowledge/engine/combat/combat-move.md` → `knowledge/reference/actions-and-phases.md` + `knowledge/reference/tested-rvas.md` as needed |
 | collision / damage beyond the currently promoted landmarks | **not yet instantiated as a canonical domain**; retrieve source-project authorities only for a concrete promotion task, then create the smallest public owner if the knowledge is ready |
-| framework/mod ecosystem | **approved but not yet instantiated**; first real framework profile should retrieve `PROJECT_PIPELINE.md` §§0, 2, 5–7, 9 and freeze any additional recurring framework-page fields from the real case |
+| `Gothic3_Animation_Behaviors` animation authoring | `knowledge/ecosystem/frameworks/gothic3-animation-behaviors.md` → related native animation/reference pages when needed → framework repository only for deeper implementation/release detail |
+| other framework/mod ecosystem work | retrieve `PROJECT_PIPELINE.md` §§0, 2, 5–7, 9 plus the selected framework's authoritative source before creating another framework page |
 | tools/resources | **approved but not yet instantiated**; first real tools index should retrieve `PROJECT_PIPELINE.md` §§0, 2, 6, 9–12 and freeze the recurring tool-entry fields from actual verified resources |
 
 When a real domain grows, add the smallest route to its index/topic authorities. Do not create another persistent summary merely to perform orientation.
