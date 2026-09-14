@@ -69,11 +69,11 @@ data/
     structured or bulk reference data when prose is the wrong representation
 ```
 
-Optional areas such as `research/`, `tools/` or site configuration should be created only when real content/work requires them.
+Optional areas such as `research/`, repository-side `tools/`, or site configuration should be created only when real content/work requires them.
 
 ### Separation rule
 
-`docs/` is project infrastructure. `knowledge/` is Gothic 3 subject matter.
+`docs/` is project infrastructure. `knowledge/` is Gothic 3 subject matter and modding-ecosystem knowledge intended for readers.
 
 Public readers should not need CAM or project-governance documents to understand the Gothic 3 knowledge base. A future static documentation site should normally publish from `knowledge/` (plus generated/reference data surfaces as appropriate), not expose the project-management layer as reader documentation.
 
@@ -95,13 +95,43 @@ knowledge/animation/
 knowledge/reference/
 knowledge/guides/
 knowledge/discoveries/
+knowledge/ecosystem/
+    frameworks/
+knowledge/tools/
 ```
 
 Subdirectories under `engine/` may include scripting, animation-system, combat, collision, damage, entities, inventory, movement, AI and other real domains as content appears.
 
+`knowledge/ecosystem/frameworks/` is reserved for a **small number of important reusable framework-type mods or extension systems** whose public behavior/contracts are useful knowledge for other modders. It is not intended to become a catalog of ordinary content mods.
+
+`knowledge/tools/` is reserved for curated modding tools/resources such as SDKs, editors, import/export utilities, asset tools and other practical utilities that are otherwise difficult to discover reliably.
+
+### Knowledge-class boundary
+
+Reader-facing material may describe three different classes of knowledge:
+
+```text
+NATIVE
+Gothic 3 engine/game/asset behavior itself
+
+FRAMEWORK / MOD-SPECIFIC
+behavior, authoring contracts or APIs provided by a particular reusable mod/framework
+
+TOOL / RESOURCE
+external utilities, SDKs, editors, converters, importers/exporters or community resources
+```
+
+These classes may cross-link, but **must not be silently conflated**.
+
+A framework-specific page must make the owning framework/mod and relevant version/revision scope obvious. For example, `G3AB_COL_RIGHT` may eventually be documented as part of the public authoring contract of `Gothic3_Animation_Behaviors`; it must never be presented as a native Gothic 3 animation marker.
+
+A tools/resource page should distinguish what a tool is for, where its authoritative/download source is, and any important compatibility/maintenance limitation known at the time of documentation.
+
+When the first actual framework profile or tools index is created, §0 applies: use the real case to freeze the exact recurring page fields before producing further entries.
+
 ### Taxonomy rule
 
-Choose the category based on what the reader is trying to retrieve, not on which project discovered the knowledge.
+Choose the category based on what the reader is trying to retrieve, not only on which project discovered the knowledge.
 
 Do not duplicate one fact into several categories merely to improve discoverability. Prefer cross-links, indexes, aliases/search metadata or generated routes to one owning page.
 
@@ -137,6 +167,8 @@ knowledge/animation/use-types.md
 knowledge/engine/combat/combat-move.md
 knowledge/reference/actions.md
 knowledge/guides/tracing-a-combat-action.md
+knowledge/ecosystem/frameworks/gothic3-animation-behaviors.md
+knowledge/tools/index.md
 ```
 
 Do not encode confidence status or revision numbers into ordinary page filenames. Current status belongs in page metadata/content; Git owns revision history.
@@ -182,7 +214,7 @@ Use the following initial statuses for factual Gothic 3 findings when a status i
 ### Status rules
 
 - status applies to the exact scoped claim, not to an entire broad subject by implication;
-- `Verified` must expose important scope limits such as game build, actor family, action path or tested configuration when relevant;
+- `Verified` must expose important scope limits such as game build, actor family, action path, framework version or tested configuration when relevant;
 - do not upgrade status merely because a claim is repeated in multiple documents that share the same original source;
 - source/API declarations, static findings, runtime observations and interpretations should remain distinguishable when that distinction matters;
 - disagreement or uncertainty should be made visible rather than silently averaged into confident prose.
@@ -197,6 +229,8 @@ The initial promoted knowledge slice established a plain-Markdown metadata conve
 **Knowledge status:** <status or bounded status description>
 **Scope:** <the boundary readers must know>
 ```
+
+For framework/mod-specific knowledge, `Scope` must name the framework/mod and relevant version/revision boundary when material. If the first real framework pages show that a separate `Knowledge class` or equivalent field improves clarity, use §0 to capture that convention before a second framework profile independently chooses another pattern.
 
 Add a compact `**Critical warning:** ...` line only when missing the warning could make direct reuse unsafe, such as build-specific RVA pages.
 
@@ -216,6 +250,8 @@ Prefer the strongest practical locator, such as:
 - tested binary-reference source/build;
 - runtime/test artifact identity;
 - exact asset/file identity;
+- framework/mod repository + release/commit + public documentation/source contract;
+- authoritative tool homepage/repository/release/source;
 - public external source/citation.
 
 ### Source-project identity
@@ -250,17 +286,34 @@ New shared knowledge normally enters through:
 source project discovery / evidence
 → source-project interpretation or closure
 → reusable-knowledge check
+→ classify native vs framework/mod-specific vs tool/resource knowledge
 → distill current reusable meaning
 → preserve scope + status + provenance
-→ update the owning knowledge/reference page
+→ update the owning knowledge/reference/ecosystem page
 → update retrieval routes only if needed
 ```
 
 The reusable-knowledge check is:
 
-> **Would another Gothic 3 modder benefit from knowing this independently of the source project that discovered it?**
+> **Would another Gothic 3 modder benefit from knowing this either because it explains Gothic 3 itself, or because it documents a reusable framework/tool/resource they may intentionally use or depend on?**
 
-### Promote meaning, not machinery
+This replaces the narrower assumption that promoted knowledge must always be useful independently of the source project. A source project can itself become part of the reusable modding ecosystem when it exposes a stable public framework, authoring contract or compatibility surface.
+
+### Native knowledge vs framework knowledge
+
+For source projects that are also reusable frameworks, separate two legitimate promotion paths:
+
+```text
+research discovered native Gothic 3 behavior
+→ promote under native engine/animation/reference knowledge
+
+framework exposes a reusable public contract
+→ promote under ecosystem/framework knowledge
+```
+
+Do not mix the two merely because they were discovered or implemented in the same repository.
+
+### Promote meaning, not internal machinery
 
 Do not copy source-project material wholesale when it exists mainly to operate that project.
 
@@ -268,11 +321,12 @@ Normally exclude:
 
 - transient handoffs;
 - task contracts;
-- build/deployment procedures;
+- local build/deployment procedures that framework users do not need;
 - collaboration protocols;
 - probe chronology with no continuing reusable value;
 - project-specific state pointers;
-- obsolete implementation scaffolding.
+- obsolete implementation scaffolding;
+- internal implementation detail that does not form part of a reusable framework contract or reusable Gothic 3 mechanism.
 
 Preserve relevant negative results and failed interpretations when they prevent likely future mistakes or materially define the boundary of current knowledge.
 
@@ -304,13 +358,14 @@ A knowledge page should normally answer the useful current question first and ke
 
 When appropriate, pages should make visible:
 
-- what the thing/mechanism is;
+- what the thing/mechanism/tool/framework is;
 - current bounded behavior or rule;
 - important limitations/traps;
+- native vs framework/tool scope when relevant;
 - status/confidence;
-- build/version scope;
+- build/version/framework scope;
 - related topics;
-- provenance/evidence route.
+- provenance/evidence route or authoritative tool/framework source.
 
 ### First accepted page structure
 
@@ -342,6 +397,8 @@ A page may omit `Related pages` when no useful cross-route exists. A trivial/non
 
 This convention is now **accepted**, not provisional, for ordinary Markdown knowledge pages. Website-specific metadata/frontmatter remains separately unfrozen.
 
+Framework profiles and tool-directory entries may require additional recurring fields. Their first real accepted instance must use §0 to establish those fields rather than forcing native technical-page structure onto a different information type prematurely.
+
 ### Guide vs reference vs provenance
 
 Use the smallest fitting role:
@@ -366,7 +423,8 @@ Potential examples include:
 - parsed animation components;
 - actions/phases/UseTypes/poses;
 - symbols/functions/hooks/RVAs;
-- frame-effect catalogs.
+- frame-effect catalogs;
+- curated tool/resource records when the directory grows large enough to benefit from generation/validation.
 
 The authoritative source may be structured data with generated reader pages, or a human page may remain authoritative with structured data as a retrieval aid. Decide this per domain and record the owner in `KNOWLEDGE_REGISTRY.md`.
 
@@ -382,7 +440,7 @@ The normal retrieval path is:
 
 ```text
 search / domain index
-→ owning topic/reference page
+→ owning topic/reference/framework/tool page
 → exact provenance only when needed
 ```
 
@@ -397,7 +455,7 @@ SESSION_ENTRYPOINT
 
 Searchability should be improved through meaningful titles, exact technical terms, cross-links and structured indexes rather than by copying the same explanation into many pages.
 
-Exact engine names/symbols/tokens should be written in their canonical spelling so full-text search can find them.
+Exact engine names/symbols/tokens, framework feature names and tool names should be written in their canonical spelling so full-text search can find them.
 
 A searchable static documentation website is an intended presentation layer, but website tooling does not become the knowledge authority. Markdown/data in the repository remain the durable source of truth unless a future deliberate architecture decision changes that boundary.
 
@@ -410,14 +468,15 @@ The first accepted website/tooling configuration that establishes reusable build
 For ordinary additions:
 
 ```text
-identify candidate reusable Gothic 3 knowledge
+identify candidate reusable Gothic 3 or modding-ecosystem knowledge
+→ classify native vs framework/mod-specific vs tool/resource
 → locate or choose one owning page/data authority
 → retrieve provenance needed to state it safely
 → distinguish observation from interpretation
 → state scope + epistemic status where material
 → write/update canonical knowledge
 → add only necessary cross-links/index routes
-→ verify a fresh reader can find and understand it
+→ verify a fresh reader can find and understand it without confusing its knowledge class
 → if this addition created the first accepted instance of a recurring convention, execute §0 first-use capture
 → maintain current project state only if the active responsibility changed
 ```
@@ -445,4 +504,4 @@ When the change affects taxonomy, source-of-truth responsibility, provenance sem
 
 ## Core rule
 
-> **Keep the knowledge flexible but the operating grammar stable: do not pre-design machinery without need, but capture the first durable repeatable pattern before a second instance can drift; separate project infrastructure from public subject matter, organize by reader question, preserve one owner for current meaning, distinguish status and provenance, promote reusable knowledge rather than source-project machinery, and change conventions deliberately instead of allowing each new context to restyle the repository.**
+> **Keep the knowledge flexible but the operating grammar stable: do not pre-design machinery without need, but capture the first durable repeatable pattern before a second instance can drift; distinguish native Gothic 3 knowledge from framework/mod-specific contracts and tools/resources without excluding any of them when they are genuinely useful; preserve one owner for current meaning; preserve scope and provenance; and change conventions deliberately instead of allowing each new context to restyle the repository.**
