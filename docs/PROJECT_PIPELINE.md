@@ -14,6 +14,46 @@ A convention changes because there is a reason, not because a new context prefer
 
 ---
 
+## 0. First-use convention capture rule
+
+The project should not design every future mechanism in advance. However, **the first real accepted use of a new recurring mechanism must not remain an undocumented one-off that later examples reinvent differently**.
+
+When work creates the first instance of something that is likely to recur — for example the first native evidence identifier, first website/deployment configuration, first page-metadata schema, first structured dataset schema, first generated reference surface, first project-local procedure, or first new artifact naming pattern — use this sequence:
+
+```text
+real need appears
+→ create/design the smallest fit for the first real case
+→ identify which parts are one-off and which parts establish a repeatable convention
+→ in the same maintenance transaction, record the repeatable convention in PROJECT_PIPELINE
+   or create another authority only if the responsibility is genuinely distinct
+→ update KNOWLEDGE_REGISTRY if a new owner/responsibility was created
+→ before creating a second independent instance, retrieve and follow the recorded convention
+```
+
+### Second-instance gate
+
+The first accepted instance may establish the convention. The **second independent instance must not invent a parallel pattern from memory or preference**.
+
+Before a second instance is created:
+
+- use the recorded convention; or
+- if the first pattern proved inadequate, deliberately revise the convention with the reason, effective boundary and treatment of the first artifact.
+
+### Provisional first use
+
+Sometimes one example is not enough to freeze a good permanent rule. In that case:
+
+- mark the first-use convention as **provisional** in this pipeline or its owning authority;
+- state what remains unresolved;
+- do not let the provisional pattern silently become permanent through repetition;
+- resolve, revise or deliberately retain it before the second accepted/production use where practical.
+
+An intentionally throwaway experiment does not need to establish a project convention merely because it exists. The trigger is the first use that is accepted as part of the durable project or that future work is reasonably expected to repeat.
+
+> **Delay machinery until reality justifies it; once reality creates a repeatable pattern, capture that pattern before repetition creates drift.**
+
+---
+
 ## 1. Repository areas
 
 Use these top-level responsibilities unless a demonstrated future need justifies change:
@@ -185,6 +225,8 @@ This project has **no native repository-wide EV numbering scheme** at startup.
 
 Introduce one only if real usage demonstrates that local source links/page evidence sections are insufficient for reliable retrieval or maintenance.
 
+If the first native evidence identifier is ever introduced, §0 applies: the identifier form, ownership, sequence/scope and reuse rules must be captured before a second native evidence item is assigned.
+
 ---
 
 ## 7. Promotion from source projects
@@ -289,6 +331,8 @@ The authoritative source may be structured data with generated reader pages, or 
 
 Do not maintain two independently editable canonical copies of the same dataset.
 
+The first time a structured-data format/schema is accepted for a recurring domain, §0 applies: capture the canonical owner, format/schema convention and generated-vs-human ownership boundary before a second independently designed dataset creates a competing pattern.
+
 ---
 
 ## 11. Search and retrieval conventions
@@ -316,6 +360,8 @@ Exact engine names/symbols/tokens should be written in their canonical spelling 
 
 A searchable static documentation website is an intended presentation layer, but website tooling does not become the knowledge authority. Markdown/data in the repository remain the durable source of truth unless a future deliberate architecture decision changes that boundary.
 
+The first accepted website/tooling configuration that establishes reusable build, navigation, metadata or deployment conventions is governed by §0 and must be captured before later site work independently reinvents those conventions.
+
 ---
 
 ## 12. Standard knowledge-addition flow
@@ -331,6 +377,7 @@ identify candidate reusable Gothic 3 knowledge
 → write/update canonical knowledge
 → add only necessary cross-links/index routes
 → verify a fresh reader can find and understand it
+→ if this addition created the first accepted instance of a recurring convention, execute §0 first-use capture
 → maintain current project state only if the active responsibility changed
 ```
 
@@ -357,4 +404,4 @@ When the change affects taxonomy, source-of-truth responsibility, provenance sem
 
 ## Core rule
 
-> **Keep the knowledge flexible but the operating grammar stable: separate project infrastructure from public subject matter, organize by reader question, preserve one owner for current meaning, distinguish status and provenance, promote reusable knowledge rather than source-project machinery, and change conventions deliberately instead of allowing each new context to restyle the repository.**
+> **Keep the knowledge flexible but the operating grammar stable: do not pre-design machinery without need, but capture the first durable repeatable pattern before a second instance can drift; separate project infrastructure from public subject matter, organize by reader question, preserve one owner for current meaning, distinguish status and provenance, promote reusable knowledge rather than source-project machinery, and change conventions deliberately instead of allowing each new context to restyle the repository.**
