@@ -256,6 +256,8 @@ Framework pages should then:
 - show supported and unsupported boundaries when users could otherwise make unsafe assumptions;
 - use exact public feature/config/marker names so they are searchable;
 - explain user-facing behavior in enough detail that a modder can use the feature correctly, including technical behavior when it matters to authoring or use;
+- treat **plain English as lower assumed background knowledge, not as shorter documentation**: a technical term that carries a lot of meaning for an engineer or experienced native speaker may need to be unpacked into a longer step-by-step explanation for a non-specialist or non-native reader;
+- when useful, explain what a technical action means in practical terms instead of only naming the operation—for example, explain the effect on the data or authoring workflow rather than assuming the reader understands a programming term;
 - prefer practical examples and user-facing mechanics over backend implementation details such as hooks, internal state machines, probe architecture or diagnostic plumbing;
 - include backend details only when they materially explain a user-facing rule, limitation, compatibility issue or troubleshooting step;
 - use clear, plain English because a large part of the Gothic 3 community does not use English as a first language;
