@@ -19,7 +19,7 @@ read this entry point
 → recover current objective / durable boundary / next responsibility
 → read PROJECT_MANIFEST only if project purpose/authority needs orientation
 → read KNOWLEDGE_BASE_PLAN when the active work changes or applies knowledge-base architecture
-→ read the relevant PROJECT_PIPELINE section before creating/changing taxonomy, filenames, page schema, status/provenance representation, promotion flow or retrieval conventions
+→ read the relevant PROJECT_PIPELINE section before creating/changing taxonomy, filenames, page schema, knowledge-class boundary, status/provenance representation, promotion flow or retrieval conventions
 → use KNOWLEDGE_REGISTRY when ownership/update routing is needed
 → perform one-time domain orientation when entering a populated Gothic 3 domain without sufficiently fresh context
 → retrieve exact topic/source-project provenance only for the current question
@@ -72,7 +72,7 @@ The first real promotion slice has validated the ordinary Markdown page model an
 - tested build-specific RVAs;
 - CombatMove/script-continuation behavior.
 
-Continue extracting **established reusable Gothic 3 knowledge** from source projects, especially `Gothic3_Animation_Behaviors`, without importing their task history, evidence-ledger chronology, temporary probes, project plans or local implementation machinery.
+Continue extracting **established reusable Gothic 3 and Gothic 3 modding-ecosystem knowledge** from source projects, especially `Gothic3_Animation_Behaviors`, without importing their task history, evidence-ledger chronology, temporary probes, project plans or internal machinery that readers do not need.
 
 ---
 
@@ -97,7 +97,15 @@ Initial promotion source baseline:
 
 `9e8ea4034aa9d9ac10e3d6723795ce444f218404`
 
-`PROJECT_PIPELINE.md` now owns the accepted ordinary Markdown page convention established by these real pages.
+`PROJECT_PIPELINE.md` owns the accepted ordinary Markdown page convention and now also owns the distinction between:
+
+```text
+native Gothic 3 knowledge
+framework/mod-specific public contracts
+tool/resource knowledge
+```
+
+The architecture now explicitly allows future `knowledge/ecosystem/frameworks/` and `knowledge/tools/` surfaces when real content is ready. No empty reader-facing sections have been created merely to reserve them.
 
 Adopted CAM baseline remains:
 
@@ -109,18 +117,22 @@ No website implementation is frozen, no native evidence-ID namespace exists, no 
 
 ## Current accepted state relevant to continuation
 
-- The repository is the **library**; mod/research projects are **laboratories**.
-- `docs/` owns project infrastructure; `knowledge/` owns reader-facing Gothic 3 subject matter; `data/` is reserved for structured/bulk reference data when needed.
+- The repository is the **library**; mod/research projects are **laboratories**, but an important source project may also expose a reusable framework contract worth documenting as ecosystem knowledge.
+- `docs/` owns project infrastructure; `knowledge/` owns reader-facing Gothic 3 and modding-ecosystem subject matter; `data/` is reserved for structured/bulk reference data when needed.
+- Reader-facing knowledge must distinguish **native**, **framework/mod-specific**, and **tool/resource** scope rather than excluding useful non-native knowledge.
+- Framework pages are reserved for a small number of important reusable framework-type mods; this is not intended to become a catalog of ordinary content mods.
+- A future curated tools/resources index is approved in principle for SDKs, editors, import/export utilities and other useful Gothic 3 modding tools; authoritative links and compatibility/status should be preserved when known.
 - Current reader layers remain Guides, Reference and Research/provenance, but only categories with real content should be instantiated.
-- Ordinary technical Markdown pages now use the accepted header/body/provenance pattern in `PROJECT_PIPELINE.md` §§5 and 9.
+- Ordinary technical Markdown pages use the accepted header/body/provenance pattern in `PROJECT_PIPELINE.md` §§5 and 9.
 - Initial finding statuses are Verified, Strong evidence, Observed, Hypothesis, Unknown and Superseded/incorrect.
 - Status is always scoped; “Verified” must not be generalized beyond demonstrated boundaries.
 - Source-project evidence IDs keep their source identity rather than being automatically renumbered here.
-- Promotion copies reusable meaning, not another project's local task/build/probe machinery.
+- Promotion copies reusable meaning or a reusable public framework contract, not another project's local task/build/probe machinery.
 - Native engine facts and current shared interpretation belong here; unfinished source-project research remains in the source project until its reusable meaning is sufficiently established.
+- Framework-specific features such as future `G3AB_COL_*` documentation may belong here when documenting the public `Gothic3_Animation_Behaviors` authoring contract, but must never be presented as native Gothic 3 behavior.
 - `main` is the accepted public/project state; working branches/PRs are appropriate for coordinated or experimental promotion batches.
 - Searchable static documentation remains intended, but exact site tooling/frontmatter/navigation/deployment conventions remain deliberately unfrozen until website work actually begins.
-- `KNOWLEDGE_REGISTRY.md` now contains orientation routes for animation, hooks/source work and CombatMove/script-continuation knowledge.
+- `KNOWLEDGE_REGISTRY.md` contains orientation routes for animation, hooks/source work and CombatMove/script-continuation knowledge, plus approved future routes for framework and tools knowledge.
 
 ---
 
@@ -136,7 +148,12 @@ Before adopting a first structured dataset, decide from that real case:
 - provenance fields;
 - whether any reader page is generated or independently authored.
 
-Then execute the first-use convention capture rule in `PROJECT_PIPELINE.md` §0 before a second dataset independently invents another pattern.
+Two additional first-use decisions are deliberately deferred until real content exists:
+
+- the exact recurring fields for a framework profile/page;
+- the exact recurring fields/schema for the curated tools/resources index.
+
+Each must execute the first-use convention capture rule in `PROJECT_PIPELINE.md` §0 before a second independent instance creates drift.
 
 ---
 
@@ -146,24 +163,25 @@ Continue knowledge promotion using the validated page model.
 
 Preferred next source-project material, in bounded batches:
 
-1. **animation assets/families and frame effects** — promote stable native asset/mechanism knowledge, not `G3AB_COL_*` project authoring vocabulary;
+1. **animation assets/families and frame effects** — promote stable native asset/mechanism knowledge; if `Gothic3_Animation_Behaviors` public authoring features such as `G3AB_COL_*` are documented, promote them separately and explicitly as framework-specific ecosystem knowledge rather than mixing them into native animation semantics;
 2. **script-processing/API mechanisms** — `gCScriptProcessingUnit`, script state/callback concepts and other established engine-facing semantics that are reusable outside the mod;
 3. **collision/damage mechanisms only where already closed enough to state cleanly** — preserve distinctions between equipped collision, raw-8 body damage and any still-active research boundary; do not turn unfinished raw55/PhysicalFist research into canonical general claims;
-4. **native inventories/reference data** when useful — if a structured dataset is introduced, freeze its first-use schema/ownership convention immediately.
+4. **native inventories/reference data** when useful — if a structured dataset is introduced, freeze its first-use schema/ownership convention immediately;
+5. **framework/tools surfaces when deliberately selected as a bounded batch** — use the first real framework page or tools index to freeze its specific recurring fields, then expand consistently.
 
 For each batch:
 
 ```text
 retrieve smallest source authority
-→ separate established fact from active research/project machinery
-→ promote reusable current meaning
-→ preserve scope/status/provenance
+→ classify native vs framework/mod-specific vs tool/resource
+→ separate established reusable meaning from active research/internal machinery
+→ preserve scope/status/provenance or authoritative framework/tool source
 → add/update the smallest public route
 → execute first-use convention capture if a new recurring mechanism/schema appears
 → update this entry point only if the active responsibility changes materially
 ```
 
-Do not perform a bulk document copy from `Gothic3_Animation_Behaviors`.
+Do not perform a bulk document copy from `Gothic3_Animation_Behaviors` and do not create an unverified link dump for tools/resources.
 
 ---
 
@@ -171,12 +189,13 @@ Do not perform a bulk document copy from `Gothic3_Animation_Behaviors`.
 
 - project purpose / scope / authority topology → `docs/PROJECT_MANIFEST.md`
 - knowledge-base architecture / stages → `docs/KNOWLEDGE_BASE_PLAN.md`
-- page schema / naming / taxonomy / status / provenance / promotion / retrieval conventions → `docs/PROJECT_PIPELINE.md`
+- page schema / naming / taxonomy / knowledge-class / status / provenance / promotion / retrieval conventions → `docs/PROJECT_PIPELINE.md`
 - authority ownership / update triggers / domain orientation → `docs/KNOWLEDGE_REGISTRY.md`
 - project-specific collaboration adaptations → `docs/COLLABORATION_DELTA.md`
 - animation orientation → `knowledge/animation/index.md`
 - hooks/source orientation → `knowledge/hooks/index.md`
 - CombatMove/script continuation → `knowledge/engine/combat/combat-move.md`
+- framework/tools direction before first instantiation → `docs/KNOWLEDGE_BASE_PLAN.md` + relevant `PROJECT_PIPELINE.md` sections
 - central bootstrap/recovery/review procedure → adopted CAM `COLLABORATION_PROCEDURES.md`
 - deeper source-project proof → targeted authority/provenance in `tcholti/Gothic3_Animation_Behaviors`, not a whole-repository reread
 
