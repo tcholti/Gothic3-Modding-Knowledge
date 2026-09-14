@@ -3,7 +3,7 @@
 **Knowledge class:** Framework / mod-specific  
 **Knowledge status:** Current documented authoring contract  
 **Framework:** `Gothic3_Animation_Behaviors`  
-**Scope:** Animation-author-facing behavior established in the framework source at `9e8ea4034aa9d9ac10e3d6723795ce444f218404`
+**Scope:** Animation-author-facing behavior established through framework source/evidence at `3d9a659e6ac66b13d287ec91c80a04278a65cb17`
 
 ## Purpose
 
@@ -56,27 +56,26 @@ Use at most one collision command on one frame.
 
 ---
 
-## Fist marker
+## Collision marker for Fist attacks
 
-For supported normal Gothic 3 `Fist` attacks, use:
+Fist attacks use a separate marker from equipped weapons.
 
-```text
-G3AB_COL_FIST
-```
+| Marker | What it does |
+|---|---|
+| `G3AB_COL_FIST` | Allows one native body-contact hit from this authored frame. |
 
-`FIST` tells the framework to allow one native body-contact hit from that authored frame.
+`FIST` works differently from the equipped weapon markers. It does not create a weapon-like contact window, and there is currently no `G3AB_COL_FIST_OFF`.
 
-It works differently from the weapon markers above. It does not create a weapon-like contact window, and there is currently no:
+### Which Fist attacks are supported?
 
-```text
-G3AB_COL_FIST_OFF
-```
+| Attack family | `G3AB_COL_FIST` |
+|---|---|
+| Normal | Yes |
+| Power | Yes |
+| Quick | Yes |
+| Sprint | Yes |
 
-Current supported `Fist` attack families are:
-
-- Normal;
-- Power;
-- Quick.
+SprintAttack and PowerAttack use the same shipped animation resource in this case, but they are still different Gothic 3 attack actions.
 
 `PhysicalFist` is a separate Gothic 3 mechanism and is **not yet part of the public FIST authoring contract**.
 
@@ -242,14 +241,15 @@ Framework repository:
 
 `tcholti/Gothic3_Animation_Behaviors`
 
-Documented source baseline:
+Documented source/evidence baseline:
 
-`9e8ea4034aa9d9ac10e3d6723795ce444f218404`
+`3d9a659e6ac66b13d287ec91c80a04278a65cb17`
 
 Primary source authorities:
 
 - `docs/ANIMATION_RULES.md` §§8–12;
 - `docs/ANIMATION_CATALOG.md` §§3, 5–7, 11–12;
-- `docs/DESIGN.md` §4.
+- `docs/DESIGN.md` §4;
+- `docs/COLLISION_SPRINT_RAW8_IMPLEMENTATION.md` — Sprint FIST family support.
 
 This page is a simplified author-facing explanation of the framework's public behavior. The framework repository remains the normative source for implementation and exact current release behavior.
