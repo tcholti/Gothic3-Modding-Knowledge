@@ -102,11 +102,24 @@ If an attack family is not listed here, do not assume that it is supported. The 
 
 `GetUpAttack` is intentionally left unsupported. It works differently enough from the ordinary attack families that adding marker support would make the framework more complicated, while there is currently no clear animation-authoring need for it.
 
-### FinishingAttack is intentionally different
+### HackAttack and FinishingAttack are different attacks
 
-A true Gothic 3 `FinishingAttack` remains native and does not use the ordinary authored marker system.
+This can be confusing because Gothic 3 uses the same shipped animation names for two different engine actions.
 
-Do not add the framework markers to a FinishingAttack and expect it to behave like HackAttack.
+A true `FinishingAttack` is the execution attack used on an enemy who is already down. It does not use normal weapon-contact timing in the same way as an ordinary attack. The execution/death happens through the game's finishing logic and timing, so the framework does not use the ordinary collision markers for it.
+
+`HackAttack` is different. Gothic 3 has a separate native `HackAttack` action for 2H weapons and Staff. It behaves like an actual combat attack, but the shipped game normally points it to animation resources named `FinishingAttack`.
+
+So these two things can use the same animation file while still being different inside the engine:
+
+```text
+HackAttack       = normal combat action, supported by the framework in tested 2H / Staff scope
+FinishingAttack  = execution action for a downed enemy, not marker-controlled
+```
+
+The fact that Gothic 3 has a separate `HackAttack` action but reuses `FinishingAttack` animation resources strongly suggests that the asset side of this feature was never fully separated before release. That is an interpretation of the shipped game, not a proven statement about the developers' intention.
+
+Do not add the framework markers to a true FinishingAttack and expect it to behave like HackAttack.
 
 ---
 
