@@ -13,7 +13,7 @@ This page is for animation authors. It explains the parts you need when making o
 
 The most important rule is simple:
 
-> **The framework can control when an existing attack source is active, but it does not turn the attack into a different kind of attack.**
+> **The framework can control when a weapon or body contact is allowed, but it does not turn the attack into a different kind of attack.**
 
 The markers described below are framework features. They are **not native Gothic 3 animation markers**.
 
@@ -28,7 +28,7 @@ Add collision markers to the **Hit** animation at the frame where you want weapo
 | `G3AB_COL_RIGHT` | Activates the weapon in the Gothic 3 right-hand equipped slot. |
 | `G3AB_COL_LEFT` | Activates the weapon in the Gothic 3 left-hand equipped slot. |
 | `G3AB_COL_BOTH` | Activates both equipped weapon slots together. |
-| `G3AB_COL_OFF` | Turns the authored equipped collision window off until another weapon marker appears. |
+| `G3AB_COL_OFF` | Turns the authored weapon contact off until another weapon marker appears. |
 
 `RIGHT` and `LEFT` mean the **equipped slots**. They do not mean the final `R` or `L` text in an animation filename.
 
@@ -64,9 +64,9 @@ For supported normal Gothic 3 `Fist` attacks, use:
 G3AB_COL_FIST
 ```
 
-`FIST` means: allow/rearm one native body-contact damage opportunity at that authored frame.
+`FIST` tells the framework to allow one native body-contact hit from that authored frame.
 
-It is different from the weapon markers above. It does not create a permanent weapon-like collision window, and there is currently no:
+It works differently from the weapon markers above. It does not create a weapon-like contact window, and there is currently no:
 
 ```text
 G3AB_COL_FIST_OFF
@@ -78,7 +78,7 @@ Current supported `Fist` attack families are:
 - Power;
 - Quick.
 
-`PhysicalFist` is a separate engine mechanism and is **not yet part of the public FIST authoring contract**.
+`PhysicalFist` is a separate Gothic 3 mechanism and is **not yet part of the public FIST authoring contract**.
 
 ---
 
@@ -165,7 +165,7 @@ A real `FinishingAttack` is left unchanged.
 
 ## What the markers do not change
 
-The markers are mainly about **when the physical attack source may make contact**.
+The markers are mainly about **when weapon or body contact is allowed**.
 
 They do not automatically change:
 
