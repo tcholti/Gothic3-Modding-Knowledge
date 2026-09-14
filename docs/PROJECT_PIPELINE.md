@@ -255,9 +255,11 @@ Framework pages should then:
 - state clearly what the framework adds and what remains native Gothic 3 behavior;
 - show supported and unsupported boundaries when users could otherwise make unsafe assumptions;
 - use exact public feature/config/marker names so they are searchable;
-- prefer short examples and practical authoring steps over internal hook/state-machine terminology;
+- explain user-facing behavior in enough detail that a modder can use the feature correctly, including technical behavior when it matters to authoring or use;
+- prefer practical examples and user-facing mechanics over backend implementation details such as hooks, internal state machines, probe architecture or diagnostic plumbing;
+- include backend details only when they materially explain a user-facing rule, limitation, compatibility issue or troubleshooting step;
 - use clear, plain English because a large part of the Gothic 3 community does not use English as a first language;
-- avoid unnecessary jargon without hiding important limitations;
+- avoid unnecessary jargon, but do not remove useful explanation merely because the behavior itself is technical;
 - mark future/planned features as future rather than presenting development ideas as current public behavior;
 - end with authoritative framework provenance/revision.
 
