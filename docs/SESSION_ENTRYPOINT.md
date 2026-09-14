@@ -19,7 +19,7 @@ read this entry point
 → recover current objective / durable boundary / next responsibility
 → read PROJECT_MANIFEST only if project purpose/authority needs orientation
 → read KNOWLEDGE_BASE_PLAN when the active work changes or applies knowledge-base architecture
-→ read the relevant PROJECT_PIPELINE section before creating/changing taxonomy, filenames, status/provenance representation, promotion flow or retrieval conventions
+→ read the relevant PROJECT_PIPELINE section before creating/changing taxonomy, filenames, page schema, status/provenance representation, promotion flow or retrieval conventions
 → use KNOWLEDGE_REGISTRY when ownership/update routing is needed
 → perform one-time domain orientation when entering a populated Gothic 3 domain without sufficiently fresh context
 → retrieve exact topic/source-project provenance only for the current question
@@ -62,80 +62,108 @@ Use the repository as authority; do not reconstruct or scan the whole project.
 
 ## Current objective / active responsibility
 
-**Stage 1 — design the first real knowledge slice.**
+**Stage 2 — expand the knowledge base domain-by-domain from the validated initial slice.**
 
-Use a small representative subset of established `Gothic3_Animation_Behaviors` knowledge to validate the reader-facing content model before bulk migration.
+The first real promotion slice has validated the ordinary Markdown page model and established canonical routes for:
 
-Preferred first slice:
+- animation naming/interpretation;
+- actions, phases and UseType normalization;
+- source/hook research rules;
+- tested build-specific RVAs;
+- CombatMove/script-continuation behavior.
 
-- animation semantics / naming;
-- actions, phases and UseTypes;
-- source/API/hook reference material.
-
-The immediate goal is to determine, from real content, the smallest effective page structure, provenance/status representation, taxonomy placement, cross-link style and boundary between prose and structured data.
+Continue extracting **established reusable Gothic 3 knowledge** from source projects, especially `Gothic3_Animation_Behaviors`, without importing their task history, evidence-ledger chronology, temporary probes, project plans or local implementation machinery.
 
 ---
 
 ## Latest durable boundary
 
-**Stage 0 project foundation is established on `main`.**
+**Stage 1 initial knowledge promotion is complete and the reader-page convention is frozen.**
 
-The repository now has:
+Reader-facing knowledge now starts at:
 
-- `docs/KNOWLEDGE_BASE_PLAN.md` — knowledge-base architecture and staged direction;
-- `docs/PROJECT_MANIFEST.md` — project charter and adopted CAM baseline;
-- `docs/PROJECT_PIPELINE.md` — stable knowledge/repository conventions;
-- `docs/KNOWLEDGE_REGISTRY.md` — ownership/update routing;
-- `docs/COLLABORATION_DELTA.md` — project-specific collaboration adaptations;
-- this session entry point.
+- `knowledge/index.md`
+- `knowledge/animation/index.md`
+- `knowledge/animation/naming.md`
+- `knowledge/reference/actions-and-phases.md`
+- `knowledge/reference/use-types.md`
+- `knowledge/hooks/index.md`
+- `knowledge/reference/tested-rvas.md`
+- `knowledge/engine/combat/combat-move.md`
 
-Adopted CAM baseline:
+Initial promotion source baseline:
+
+`tcholti/Gothic3_Animation_Behaviors` branch `docs/collision-source-evidence` at:
+
+`9e8ea4034aa9d9ac10e3d6723795ce444f218404`
+
+`PROJECT_PIPELINE.md` now owns the accepted ordinary Markdown page convention established by these real pages.
+
+Adopted CAM baseline remains:
 
 `tcholti/Collaborative-Agency-Model` branch `current` at `59c63ce300dba1e9fb598d0d1a97cd09ef9bca4e`.
 
-No public Gothic 3 knowledge has yet been bulk-migrated, no website tooling is frozen, no global evidence-ID system exists, and no project-local operating-procedure or implementation-protocol library has been created.
+No website implementation is frozen, no native evidence-ID namespace exists, no structured dataset schema has yet been adopted, and no project-local operating-procedure or implementation-protocol library has been created.
 
 ---
 
 ## Current accepted state relevant to continuation
 
 - The repository is the **library**; mod/research projects are **laboratories**.
-- Reader-facing Gothic 3 knowledge will live under `knowledge/`; project infrastructure lives under `docs/`; structured datasets may live under `data/`.
-- Current intended reader layers are Guides, Reference and Research/provenance.
+- `docs/` owns project infrastructure; `knowledge/` owns reader-facing Gothic 3 subject matter; `data/` is reserved for structured/bulk reference data when needed.
+- Current reader layers remain Guides, Reference and Research/provenance, but only categories with real content should be instantiated.
+- Ordinary technical Markdown pages now use the accepted header/body/provenance pattern in `PROJECT_PIPELINE.md` §§5 and 9.
 - Initial finding statuses are Verified, Strong evidence, Observed, Hypothesis, Unknown and Superseded/incorrect.
 - Status is always scoped; “Verified” must not be generalized beyond demonstrated boundaries.
 - Source-project evidence IDs keep their source identity rather than being automatically renumbered here.
 - Promotion copies reusable meaning, not another project's local task/build/probe machinery.
-- `main` is the accepted public/project state; working branches/PRs are used when a change benefits from isolation/review.
-- Searchable static documentation is intended, but the exact site tool and page metadata format remain deliberately unfrozen until real Stage 1 content validates them.
+- Native engine facts and current shared interpretation belong here; unfinished source-project research remains in the source project until its reusable meaning is sufficiently established.
+- `main` is the accepted public/project state; working branches/PRs are appropriate for coordinated or experimental promotion batches.
+- Searchable static documentation remains intended, but exact site tooling/frontmatter/navigation/deployment conventions remain deliberately unfrozen until website work actually begins.
+- `KNOWLEDGE_REGISTRY.md` now contains orientation routes for animation, hooks/source work and CombatMove/script-continuation knowledge.
 
 ---
 
 ## Material unresolved question
 
-The first real content slice must determine the **concrete reader-page schema** without overfitting to only one type of knowledge.
+The next major representation decision is likely to arise when importing knowledge that behaves more like **structured data** than prose — especially native animation-name inventories, parsed animation fields, symbols/functions or larger enum/reference tables.
 
-In particular, decide from actual examples:
+Before adopting a first structured dataset, decide from that real case:
 
-- which metadata should be mandatory versus optional;
-- how status, scope and provenance are displayed;
-- whether reference entries should be one page, grouped tables or structured data + generated pages;
-- how exact source-project evidence is linked without making ordinary pages research-heavy;
-- which initial taxonomy locations best fit the selected animation and source/hook material.
+- whether the data file or human page is canonical;
+- format/schema;
+- stable field names;
+- provenance fields;
+- whether any reader page is generated or independently authored.
+
+Then execute the first-use convention capture rule in `PROJECT_PIPELINE.md` §0 before a second dataset independently invents another pattern.
 
 ---
 
 ## Immediate next responsibility
 
-Retrieve the smallest authoritative source material from `Gothic3_Animation_Behaviors` needed for the first slice — beginning with its animation index/rules/catalog and source/hook guide as appropriate — and design a **small representative set of actual knowledge pages/records**.
+Continue knowledge promotion using the validated page model.
 
-Do not bulk-migrate the existing project documentation.
+Preferred next source-project material, in bounded batches:
 
-Do not configure the final website before the first content slice establishes what the presentation layer actually needs to serve.
+1. **animation assets/families and frame effects** — promote stable native asset/mechanism knowledge, not `G3AB_COL_*` project authoring vocabulary;
+2. **script-processing/API mechanisms** — `gCScriptProcessingUnit`, script state/callback concepts and other established engine-facing semantics that are reusable outside the mod;
+3. **collision/damage mechanisms only where already closed enough to state cleanly** — preserve distinctions between equipped collision, raw-8 body damage and any still-active research boundary; do not turn unfinished raw55/PhysicalFist research into canonical general claims;
+4. **native inventories/reference data** when useful — if a structured dataset is introduced, freeze its first-use schema/ownership convention immediately.
 
-Do not create a native evidence-numbering system unless the first real usage exposes a concrete retrieval/maintenance problem that source-project provenance cannot solve.
+For each batch:
 
-After the first representative pages are designed and reviewed, update the owning pipeline/registry authorities only if the real examples require a convention or ownership change.
+```text
+retrieve smallest source authority
+→ separate established fact from active research/project machinery
+→ promote reusable current meaning
+→ preserve scope/status/provenance
+→ add/update the smallest public route
+→ execute first-use convention capture if a new recurring mechanism/schema appears
+→ update this entry point only if the active responsibility changes materially
+```
+
+Do not perform a bulk document copy from `Gothic3_Animation_Behaviors`.
 
 ---
 
@@ -143,17 +171,20 @@ After the first representative pages are designed and reviewed, update the ownin
 
 - project purpose / scope / authority topology → `docs/PROJECT_MANIFEST.md`
 - knowledge-base architecture / stages → `docs/KNOWLEDGE_BASE_PLAN.md`
-- naming / taxonomy / status / provenance / promotion / retrieval conventions → `docs/PROJECT_PIPELINE.md`
-- authority ownership / update triggers → `docs/KNOWLEDGE_REGISTRY.md`
+- page schema / naming / taxonomy / status / provenance / promotion / retrieval conventions → `docs/PROJECT_PIPELINE.md`
+- authority ownership / update triggers / domain orientation → `docs/KNOWLEDGE_REGISTRY.md`
 - project-specific collaboration adaptations → `docs/COLLABORATION_DELTA.md`
+- animation orientation → `knowledge/animation/index.md`
+- hooks/source orientation → `knowledge/hooks/index.md`
+- CombatMove/script continuation → `knowledge/engine/combat/combat-move.md`
 - central bootstrap/recovery/review procedure → adopted CAM `COLLABORATION_PROCEDURES.md`
-- source material for Stage 1 → targeted files in `tcholti/Gothic3_Animation_Behaviors`, not a whole-repository reread
+- deeper source-project proof → targeted authority/provenance in `tcholti/Gothic3_Animation_Behaviors`, not a whole-repository reread
 
 ---
 
 ## Current-state drift check
 
-After any meaningful design decision, source contradiction, blocked route or completed Stage 1 boundary, ask:
+After any meaningful design decision, source contradiction, blocked route or completed promotion boundary, ask:
 
 > **If a fresh context followed this file literally now, would it begin with the correct immediate responsibility?**
 
