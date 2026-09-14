@@ -64,7 +64,7 @@ Fist attacks use a separate marker from equipped weapons.
 |---|---|
 | `G3AB_COL_FIST` | Allows one native body-contact hit from this authored frame. |
 
-`FIST` works differently from the equipped weapon markers. It does not create a weapon-like contact window, and there is currently no `G3AB_COL_FIST_OFF`.
+`FIST` works differently from the equipped weapon markers. It allows a single native body-contact hit instead of opening a weapon-like contact window. Because of that, a separate `G3AB_COL_FIST_OFF` was found unnecessary; adding one would complicate the framework without solving a real animation-authoring need.
 
 ### Which Fist attacks are supported?
 
