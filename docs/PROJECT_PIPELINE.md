@@ -187,7 +187,20 @@ Use the following initial statuses for factual Gothic 3 findings when a status i
 - source/API declarations, static findings, runtime observations and interpretations should remain distinguishable when that distinction matters;
 - disagreement or uncertainty should be made visible rather than silently averaged into confident prose.
 
-The exact visual/page metadata representation will be finalized using real Stage 1 content rather than frozen abstractly now.
+### First accepted reader-page metadata convention
+
+The initial promoted knowledge slice established a plain-Markdown metadata convention. Until a future website/tooling decision deliberately replaces it, reader-facing technical pages should begin with:
+
+```text
+# Page title
+
+**Knowledge status:** <status or bounded status description>
+**Scope:** <the boundary readers must know>
+```
+
+Add a compact `**Critical warning:** ...` line only when missing the warning could make direct reuse unsafe, such as build-specific RVA pages.
+
+Do **not** introduce YAML/frontmatter solely for cosmetic consistency before site tooling actually requires it. If future site tooling adopts frontmatter, treat that as a pipeline convention change with an explicit migration boundary.
 
 ---
 
@@ -299,7 +312,35 @@ When appropriate, pages should make visible:
 - related topics;
 - provenance/evidence route.
 
-Do not force every page to contain every field. Exact page templates will be validated against the first real content slice.
+### First accepted page structure
+
+The first promoted animation/reference/hook/combat pages established this default structure:
+
+```text
+title
+→ compact Knowledge status + Scope header
+→ Purpose
+→ answer-first body organized around reader questions/mechanism
+→ Important limitation / warning where needed
+→ Related pages when useful
+→ Provenance at the end
+```
+
+For non-trivial promoted technical knowledge, `Provenance` should normally identify:
+
+```text
+source project
++ exact source baseline commit/revision
++ smallest practical source authority path/section
+```
+
+An external evidence ID or deeper raw artifact is optional when the source authority already routes reliably to it. Do not make ordinary reader pages reproduce the evidence ledger.
+
+Reference-table pages may be primarily tables; explanatory mechanism pages may be primarily prose/flows. They still use the same status/scope/provenance boundary.
+
+A page may omit `Related pages` when no useful cross-route exists. A trivial/non-technical landing page may use a lighter header. Do not force empty sections merely to satisfy a template.
+
+This convention is now **accepted**, not provisional, for ordinary Markdown knowledge pages. Website-specific metadata/frontmatter remains separately unfrozen.
 
 ### Guide vs reference vs provenance
 
@@ -381,7 +422,7 @@ identify candidate reusable Gothic 3 knowledge
 → maintain current project state only if the active responsibility changed
 ```
 
-Bulk migration is not the default. The first representative knowledge slice must validate this model before large-scale promotion begins.
+Bulk migration is not the default. The first representative knowledge slice has now validated the ordinary Markdown page model; broader promotion should still proceed domain-by-domain rather than by copying source documentation wholesale.
 
 ---
 
