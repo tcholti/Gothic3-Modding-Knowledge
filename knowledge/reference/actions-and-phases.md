@@ -17,6 +17,7 @@ Provide a compact lookup for native action and phase values and document the mos
 | 4 | `QuickAttackR` |
 | 5 | `QuickAttackL` |
 | 6 | `SimpleWhirl` |
+| 9 | `SprintAttack` |
 | 10 | `WhirlAttack` |
 | 11 | `PierceAttack` |
 | 14 | `HackAttack` |
@@ -59,6 +60,18 @@ WhirlAttack
 ```
 
 The runtime action remains the behavior authority.
+
+### SprintAttack vs PowerAttack-looking assets
+
+A tested Sprint attack executed native:
+
+```text
+gEAction_SprintAttack = 9
+```
+
+while its motion name contained `_PowerAttack_Hit_`.
+
+That asset naming does **not** authorize treating SprintAttack as PowerAttack. The native action remains the factual action family.
 
 ### QuickAttackR / QuickAttackL
 
@@ -104,5 +117,6 @@ Primary source:
 
 - `docs/ANIMATION_RULES.md` §§5, 7, 12
 - `docs/ANIMATION_INDEX.md` §4
+- `docs/DESIGN.md` §4.5 for the established `SprintAttack = 9` runtime/filename mismatch
 
 For complete enum declarations, consult the Gothic 3 SDK `GameEnum.h`; this page intentionally preserves the subset and interpretation rules already established through modding work.
