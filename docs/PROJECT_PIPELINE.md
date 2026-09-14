@@ -230,11 +230,38 @@ The initial promoted knowledge slice established a plain-Markdown metadata conve
 **Scope:** <the boundary readers must know>
 ```
 
-For framework/mod-specific knowledge, `Scope` must name the framework/mod and relevant version/revision boundary when material. If the first real framework pages show that a separate `Knowledge class` or equivalent field improves clarity, use §0 to capture that convention before a second framework profile independently chooses another pattern.
+For framework/mod-specific knowledge, `Scope` must name the framework/mod and relevant version/revision boundary when material.
 
 Add a compact `**Critical warning:** ...` line only when missing the warning could make direct reuse unsafe, such as build-specific RVA pages.
 
 Do **not** introduce YAML/frontmatter solely for cosmetic consistency before site tooling actually requires it. If future site tooling adopts frontmatter, treat that as a pipeline convention change with an explicit migration boundary.
+
+### First accepted framework-page convention
+
+The first framework page, `knowledge/ecosystem/frameworks/gothic3-animation-behaviors.md`, establishes the recurring framework-page header:
+
+```text
+# Framework / feature title
+
+**Knowledge class:** Framework / mod-specific
+**Knowledge status:** <current status>
+**Framework:** <canonical framework/mod name>
+**Scope:** <release/revision and user-facing boundary>
+```
+
+Framework pages should then:
+
+- explain the feature from the user's point of view before implementation detail;
+- state clearly what the framework adds and what remains native Gothic 3 behavior;
+- show supported and unsupported boundaries when users could otherwise make unsafe assumptions;
+- use exact public feature/config/marker names so they are searchable;
+- prefer short examples and practical authoring steps over internal hook/state-machine terminology;
+- use clear, plain English because a large part of the Gothic 3 community does not use English as a first language;
+- avoid unnecessary jargon without hiding important limitations;
+- mark future/planned features as future rather than presenting development ideas as current public behavior;
+- end with authoritative framework provenance/revision.
+
+This framework-page convention is **accepted**, not provisional. More specialized framework subpages may add fields later if a real need appears, but they should preserve this class/framework/scope boundary.
 
 ---
 
@@ -397,7 +424,7 @@ A page may omit `Related pages` when no useful cross-route exists. A trivial/non
 
 This convention is now **accepted**, not provisional, for ordinary Markdown knowledge pages. Website-specific metadata/frontmatter remains separately unfrozen.
 
-Framework profiles and tool-directory entries may require additional recurring fields. Their first real accepted instance must use §0 to establish those fields rather than forcing native technical-page structure onto a different information type prematurely.
+Framework pages use the additional accepted convention in §5. Tool-directory entries remain unfrozen until the first real tools index is created.
 
 ### Guide vs reference vs provenance
 
