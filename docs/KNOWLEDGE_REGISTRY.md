@@ -21,12 +21,13 @@ This registry prevents the project plan, pipeline, indexes, topic pages and sour
 | project purpose / long-term direction / scope / authority topology / adopted CAM revision | `docs/PROJECT_MANIFEST.md` | central CAM baseline | purpose, scope, topology or deliberately adopted CAM revision changes | ordinary knowledge addition or source-project discovery |
 | knowledge-base architecture / intended reader experience / staged development direction | `docs/KNOWLEDGE_BASE_PLAN.md` | manifest routes to it | knowledge-base model, development stages or intended public shape materially changes | routine use of the existing plan or addition inside an established domain |
 | current objective / latest durable boundary / immediate next responsibility | `docs/SESSION_ENTRYPOINT.md` | Git durable state | active responsibility or prerequisite/blocker changes what a fresh context should do next | minor substep that does not change continuation |
-| stable repository areas / taxonomy conventions / naming / status vocabulary / provenance / promotion / correction / retrieval conventions | `docs/PROJECT_PIPELINE.md` | plan + topic authorities | an accepted recurring convention changes, a new stable convention responsibility is established, **or the first accepted use of a new recurring mechanism creates a convention that future instances must follow** | routine use of an established convention or a new Chat preferring another style |
+| stable repository areas / taxonomy conventions / naming / page structure / status vocabulary / provenance / promotion / correction / retrieval conventions | `docs/PROJECT_PIPELINE.md` | plan + topic authorities | an accepted recurring convention changes, a new stable convention responsibility is established, or the first accepted use of a new recurring mechanism creates a convention that future instances must follow | routine use of an established convention or a new Chat preferring another style |
 | detailed authority ownership / update triggers / domain orientation routes | `docs/KNOWLEDGE_REGISTRY.md` | manifest authority map | ownership, update triggers or retrieval/orientation routes materially change, including when first-use convention capture creates a genuinely new owner/responsibility | knowledge grows inside an already-correct owner |
 | project-specific collaboration adaptations | `docs/COLLABORATION_DELTA.md` | CAM reusable baseline | recurring project-specific participant/tool/evidence/retrieval collaboration behavior changes | ordinary subject-matter knowledge or general CAM behavior applies unchanged |
-| reader-facing Gothic 3 topic knowledge | owning page under `knowledge/` once established | source-project provenance / reference data / related topic routes | current bounded Gothic 3 meaning is established, corrected, scoped differently or materially reinterpreted | project-local implementation detail with no reusable Gothic 3 meaning |
+| reader-facing top-level navigation | `knowledge/index.md` | domain indexes/topic pages | top-level reader routes materially change | ordinary fact correction inside an already-routed page |
+| reader-facing Gothic 3 topic knowledge | owning page under `knowledge/` | source-project provenance / reference data / related topic routes | current bounded Gothic 3 meaning is established, corrected, scoped differently or materially reinterpreted | project-local implementation detail with no reusable Gothic 3 meaning |
 | exact structured Gothic 3 reference dataset | owning artifact under `data/` once a domain deliberately adopts structured data | generated reader surface or source inventory | authoritative dataset changes or schema changes deliberately | prose explanation changes without data change |
-| reader-facing index / navigation route | relevant index under `knowledge/` once needed | owning topic pages/data | retrieval materially improves or category route changes | every new fact already discoverable through current route |
+| reader-facing domain index / navigation route | relevant index under `knowledge/` | owning topic pages/data | retrieval materially improves or category route changes | every new fact already discoverable through current route |
 | provenance for knowledge promoted from another Gothic project | originating project / exact source locator unless deliberately copied | shared topic page cites/routes to it | source/provenance locator changes, disappears, or new evidence materially changes the claim | shared wording change that leaves supporting provenance unchanged |
 | superseded ordinary wording/history | Git history | explicit supersession note only when useful | automatically preserved by version control | do not create parallel history documents merely to restate old wording |
 | static documentation website / generated presentation tooling | future tooling/config authority when created | `knowledge/` + `data/` source material | site tooling/source-of-truth boundary or deployment architecture changes | ordinary knowledge correction that the site merely rebuilds from source |
@@ -54,7 +55,7 @@ These specialist authorities are not one total order. Responsibility determines 
 Examples:
 
 - the manifest may define that public knowledge must preserve provenance;
-- the pipeline defines the recurring provenance convention;
+- the pipeline defines the recurring provenance/page convention;
 - an animation page owns the current Gothic 3 animation fact;
 - a source-project EV record may own the detailed proof;
 - an index only routes the reader to the animation page.
@@ -96,15 +97,16 @@ Do not make a source-project evidence record carry a growing list of every possi
 
 ## 4. Domain orientation routes
 
-The project is still at foundation stage, so domain routes are deliberately small.
+Use these routes once when entering a substantial knowledge domain without sufficiently fresh context. Then retrieve only the exact page/provenance needed for the active question.
 
 | Domain / work area | Orientation route |
 |---|---|
-| project foundation / knowledge-base design | `PROJECT_MANIFEST.md` → `KNOWLEDGE_BASE_PLAN.md` → relevant `PROJECT_PIPELINE.md` section |
-| first knowledge-slice design | `KNOWLEDGE_BASE_PLAN.md` Stage 1 → `PROJECT_PIPELINE.md` → selected source-project authorities/provenance |
-| animation knowledge | **not yet instantiated**; create the route when first canonical animation pages/data exist |
-| source / API / hooks | **not yet instantiated**; create the route when first canonical hook/reference pages/data exist |
-| combat / collision | **not yet instantiated**; create the route when this domain is actually promoted |
+| project foundation / knowledge-base design | `docs/PROJECT_MANIFEST.md` → `docs/KNOWLEDGE_BASE_PLAN.md` → relevant `docs/PROJECT_PIPELINE.md` section |
+| ordinary knowledge promotion | `docs/PROJECT_PIPELINE.md` §§5–12 → relevant domain index/page → exact source-project authority/provenance only as needed |
+| animation knowledge | `knowledge/animation/index.md` → `knowledge/animation/naming.md` and/or `knowledge/reference/actions-and-phases.md` / `knowledge/reference/use-types.md` |
+| source / API / hooks | `knowledge/hooks/index.md` → `knowledge/reference/tested-rvas.md` → exact source/project reference only when needed |
+| CombatMove / script continuation | `knowledge/engine/combat/combat-move.md` → `knowledge/reference/actions-and-phases.md` + `knowledge/reference/tested-rvas.md` as needed |
+| collision / damage beyond the currently promoted landmarks | **not yet instantiated as a canonical domain**; retrieve source-project authorities only for a concrete promotion task, then create the smallest public owner if the knowledge is ready |
 
 When a real domain grows, add the smallest route to its index/topic authorities. Do not create another persistent summary merely to perform orientation.
 
