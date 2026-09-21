@@ -1,10 +1,10 @@
 # Gothic 3 Modding Knowledge — Session Entry Point
 
 **Project:** `tcholti/Gothic3-Modding-Knowledge`  
-**Purpose:** Minimal durable front door for a fresh Chat/session/context  
+**Purpose:** Minimal durable current-state entry point for a fresh Chat/session/context  
 **Active branch:** `main`
 
-Read this first. Do not reconstruct or scan the whole repository by default.
+Normally reach this file through root `README.md` → **Project continuation / recovery**. The root README owns discoverability; this file owns current state and routed bootstrap. Do not reconstruct or scan the whole repository by default.
 
 ---
 
@@ -54,7 +54,7 @@ Do not turn one failed context into a whole-repository audit.
 
 ```text
 Open tcholti/Gothic3-Modding-Knowledge on main.
-Read docs/SESSION_ENTRYPOINT.md and follow its complete fresh-context bootstrap/recovery procedure before claiming readiness.
+Read the root README.md and follow its Project continuation / recovery route before claiming readiness.
 Use the repository as authority; do not reconstruct or scan the whole project.
 ```
 
@@ -62,7 +62,7 @@ Use the repository as authority; do not reconstruct or scan the whole project.
 
 ## Current objective / active responsibility
 
-**Stage 2 — expand the knowledge base domain-by-domain from the validated initial slice.**
+**Current expansion responsibility — continue growing the knowledge base domain-by-domain from the validated initial slice.**
 
 The first real promotion slice has validated the ordinary Markdown page model and established canonical routes for:
 
@@ -74,6 +74,8 @@ The first real promotion slice has validated the ordinary Markdown page model an
 - the first reusable framework authoring guide for `Gothic3_Animation_Behaviors`.
 
 Continue extracting **established reusable Gothic 3 and Gothic 3 modding-ecosystem knowledge** from source projects, especially `Gothic3_Animation_Behaviors`, without importing their task history, evidence-ledger chronology, temporary probes, project plans or internal machinery that readers do not need.
+
+`KNOWLEDGE_BASE_PLAN.md` still labels the searchable-site prototype as Stage 2 and systematic promotion as Stage 3. The current durable project state has continued promotion before the site prototype. This entry point records that actual sequencing without silently renumbering or rewriting the long-term plan; reconcile the plan deliberately if the changed order is later adopted as the intended long-term sequence.
 
 ---
 
@@ -109,9 +111,11 @@ tool/resource knowledge
 
 The framework knowledge surface is now instantiated with the G3AB animation-author guide. `knowledge/tools/` remains an approved future surface but has not been created merely to reserve it.
 
-Adopted CAM baseline remains:
+Adopted CAM baseline:
 
-`tcholti/Collaborative-Agency-Model` branch `current` at `59c63ce300dba1e9fb598d0d1a97cd09ef9bca4e`.
+`tcholti/Collaborative-Agency-Model` branch `current` at `c4a0ef5305103b3cfeafaf136326d4dbc7cc530d`.
+
+This adoption adds the reusable discoverable-first-hop / current-state ownership distinction and the conditional structural-validator closure rule. This repository has no configured structural validator yet, so that second mechanism adds no local machinery at this time.
 
 No website implementation is frozen, no native evidence-ID namespace exists, no structured dataset schema has yet been adopted, and no project-local operating-procedure or implementation-protocol library has been created.
 
