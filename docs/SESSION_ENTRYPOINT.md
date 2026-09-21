@@ -111,11 +111,9 @@ tool/resource knowledge
 
 The framework knowledge surface is now instantiated with the G3AB animation-author guide. `knowledge/tools/` remains an approved future surface but has not been created merely to reserve it.
 
-Adopted CAM baseline:
+CAM/current adoption was refreshed during the 2026-09-21 startup/adoption test. The **exact currently adopted baseline identity is owned only by `PROJECT_MANIFEST.md`**.
 
-`tcholti/Collaborative-Agency-Model` branch `current` at `c4a0ef5305103b3cfeafaf136326d4dbc7cc530d`.
-
-This adoption adds the reusable discoverable-first-hop / current-state ownership distinction and the conditional structural-validator closure rule. This repository has no configured structural validator yet, so that second mechanism adds no local machinery at this time.
+The adopted refinement adds the reusable discoverable-first-hop / current-state ownership distinction and the conditional structural-validator closure rule. This repository has no configured structural validator yet, so that second mechanism adds no local machinery at this time.
 
 No website implementation is frozen, no native evidence-ID namespace exists, no structured dataset schema has yet been adopted, and no project-local operating-procedure or implementation-protocol library has been created.
 
