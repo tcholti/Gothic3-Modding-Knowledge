@@ -38,9 +38,9 @@ Research   → Why do we believe this / where did it come from?
 
 The detailed plan, early content domains and staged development path are defined in `KNOWLEDGE_BASE_PLAN.md`.
 
-### Current high-level objective
+### Project-level objective
 
-Establish a coherent sustained-project foundation, then validate the knowledge model using a small representative slice of existing Gothic 3 knowledge before any bulk migration.
+Maintain and grow a coherent public Gothic 3 knowledge base from reusable, provenance-preserving knowledge. Exact active responsibility and sequencing belong in `SESSION_ENTRYPOINT.md` and `KNOWLEDGE_BASE_PLAN.md`, not in this charter.
 
 ### Priorities
 
@@ -125,9 +125,9 @@ A normal fresh Chat/session should:
 
 1. enter through root `README.md` → **Project continuation / recovery**;
 2. read `docs/SESSION_ENTRYPOINT.md`;
-3. only then retrieve additional authorities routed by the current responsibility;
-3. the relevant domain orientation route once when entering a substantial knowledge area without sufficiently fresh context;
-4. exact deeper sources only when needed.
+3. retrieve only the additional authorities routed by the current responsibility;
+4. use the relevant domain orientation route once when entering a substantial knowledge area without sufficiently fresh context;
+5. retrieve exact deeper sources only when needed.
 
 Reading the entry point alone is not sufficient if it routes additional bootstrap work.
 
@@ -148,6 +148,7 @@ If the previous context ended unexpectedly before maintenance was known to be co
 | Responsibility | Primary authority |
 |---|---|
 | project purpose / long-term direction / scope / authority topology | `docs/PROJECT_MANIFEST.md` |
+| discoverable continuation / interrupted-recovery first hop | root `README.md` |
 | knowledge-base architecture / content model / staged development direction | `docs/KNOWLEDGE_BASE_PLAN.md` |
 | current objective / latest durable boundary / immediate next responsibility | `docs/SESSION_ENTRYPOINT.md` |
 | stable taxonomy, naming, provenance/status, promotion and retrieval conventions | `docs/PROJECT_PIPELINE.md` |
