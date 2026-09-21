@@ -21,6 +21,21 @@ Current reader-facing material includes:
 
 The knowledge base will continue to grow domain-by-domain as established reusable findings are promoted from Gothic 3 modding/research projects.
 
+## Project continuation / recovery
+
+This root README is the **stable discoverable first hop** for project collaboration as well as the public repository front page.
+
+For ordinary continuation:
+
+1. read [Session Entry Point](docs/SESSION_ENTRYPOINT.md);
+2. follow only the additional routes it triggers for the current responsibility.
+
+If the previous Chat ended unexpectedly, hit a context limit, became unusable, or may have stopped before maintenance completed:
+
+> Open `tcholti/Gothic3-Modding-Knowledge` on `main`. Read this root `README.md` and follow the **Project continuation / recovery** route before claiming readiness. Use the repository as authority; do not reconstruct or scan the whole project.
+
+In that case, enter the adopted CAM **Recovery Lock**: treat the session entry point as a clue until the recent durable tail and any missed maintenance have been reconciled. This README owns discoverability and routing, not current project state.
+
 ## Project architecture
 
 These files sustain the repository itself; ordinary readers do not need them to use the Gothic 3 knowledge pages.
