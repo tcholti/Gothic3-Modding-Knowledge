@@ -3,7 +3,7 @@
 **Project:** `tcholti/Gothic3-Modding-Knowledge`  
 **Status:** Active project configuration and highest project-specific authority  
 **Central collaboration baseline:** `tcholti/Collaborative-Agency-Model` branch `current`  
-**Currently adopted CAM revision:** `59c63ce300dba1e9fb598d0d1a97cd09ef9bca4e`  
+**Currently adopted CAM revision:** `c4a0ef5305103b3cfeafaf136326d4dbc7cc530d`  
 **Initialized:** 2026-09-14
 
 ## Purpose
@@ -105,9 +105,11 @@ Specialist topic authorities remain primary inside their delegated domains once 
 
 **Primary repository:** `tcholti/Gothic3-Modding-Knowledge`  
 **Stable/public branch:** `main`  
-**Current initial state:** project foundation and knowledge-model design  
-**Project entry point:** `docs/SESSION_ENTRYPOINT.md`  
+**Discoverable project front door:** root `README.md`  
+**Current-state entry point:** `docs/SESSION_ENTRYPOINT.md`  
 **Pipeline authority:** `docs/PROJECT_PIPELINE.md`
+
+The manifest does not duplicate the live current objective; retrieve that from `SESSION_ENTRYPOINT.md`.
 
 `main` represents the currently accepted public/project state. Working branches and pull requests may be used when a change is large, experimental, contributor-supplied or benefits from review, but the project does not require a permanent development branch before real workflow shows one is useful.
 
@@ -117,10 +119,13 @@ Git history preserves superseded documentation and prior accepted states. Do not
 
 ## 3. Fresh-context bootstrap and recovery
 
-A normal fresh Chat/session should read:
+The root `README.md` is the stable discoverable first hop. It routes project continuation to the maintained current-state entry point and makes interrupted-context recovery discoverable without requiring remembered Chat instructions. It is not a second current-state authority.
 
-1. `docs/SESSION_ENTRYPOINT.md` first;
-2. only the additional authorities routed by the current responsibility;
+A normal fresh Chat/session should:
+
+1. enter through root `README.md` → **Project continuation / recovery**;
+2. read `docs/SESSION_ENTRYPOINT.md`;
+3. only then retrieve additional authorities routed by the current responsibility;
 3. the relevant domain orientation route once when entering a substantial knowledge area without sufficiently fresh context;
 4. exact deeper sources only when needed.
 
@@ -130,7 +135,7 @@ Reading the entry point alone is not sufficient if it routes additional bootstra
 
 ```text
 Open tcholti/Gothic3-Modding-Knowledge on main.
-Read docs/SESSION_ENTRYPOINT.md and follow its complete fresh-context bootstrap/recovery procedure before claiming readiness.
+Read the root README.md and follow its Project continuation / recovery route before claiming readiness.
 Use the repository as authority; do not reconstruct or scan the whole project.
 ```
 
